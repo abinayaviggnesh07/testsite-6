@@ -1,26 +1,22 @@
 <head>
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '920758910643819');
-     fbq('track', 'PageView');  <-- Commented out or removed
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=920758910643819&ev=PageView&noscript=1"
-    />
-  </noscript>
-</head>
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '920758910643819');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=920758910643819&ev=PageView&noscript=1"
+/></noscript>
 <!-- End Meta Pixel Code -->
-
-  <meta name="facebook-domain-verification" content="qowwrhpyni79cf2pms3zixyrxoh3b4" />
+<meta name="facebook-domain-verification" content="qowwrhpyni79cf2pms3zixyrxoh3b4" />
 <title>pixel test page</title>
 </head>
 <body>
@@ -42,13 +38,7 @@ document.getElementById('addToWishlistButton').addEventListener('click', functio
 }, false);
 
 document.getElementById('addToCartButton').addEventListener('click', function() {
-  fbq('track', 'AddToCart', {
-    value: '115',
-    currency: 'USD',
-    content_ids: ['123456'],
-    content_type: 'product',
-    source: 'marketingClient'
-  });
+  fbq('track', 'AddToCart');
 }, false);
 
 document.getElementById('checkoutButton').addEventListener('click', function() {
@@ -57,8 +47,8 @@ document.getElementById('checkoutButton').addEventListener('click', function() {
 
 document.getElementById('purchaseButton').addEventListener('click', function() {
   fbq('track', 'Purchase', {
-    value: ten,
-    currency: 'U',
+    value: 100,
+    currency: 'USD',
   });
 }, false);
 
@@ -70,4 +60,4 @@ document.getElementById('registrationButton').addEventListener('click', function
   fbq('track', 'CompleteRegistration');
 }, false);
 </script>
-</body> 
+</body>
