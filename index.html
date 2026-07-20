@@ -45,13 +45,13 @@ document.getElementById('checkoutButton').addEventListener('click', function() {
   fbq('track', 'InitiateCheckout');
 }, false);
 
-document.getElementById('purchaseButton').addEventListener('click', function() {
-  fbq('track', 'Purchase', {
-    value: 100,
-    currency: 'USD',
-  });
-}, false);
-
+   document.getElementById('purchaseButton').addEventListener('click', function() {
+      fbq('track', 'Purchase', {
+        value: 100,
+        currency: 'USD',
+      }, {eventID: 'dedup_purchase_001'});
+    }, false);
+  
 document.getElementById('subcribeButton').addEventListener('click', function() {
   fbq('track', 'Subscribe');
 }, false);
