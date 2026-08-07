@@ -38,12 +38,7 @@ document.getElementById('addToWishlistButton').addEventListener('click', functio
 }, false);
 
 document.getElementById('addToCartButton').addEventListener('click', function() {
-  fbq('track', 'AddToCart', {
-  content_category: 'shoes',
-  content_ids: ['3'],
-  currency: 'USD',
-  value: 139.99
-}, { eventID: 'test-001' });
+fbq('init', '27541625348843296', { external_id: 'customer_123' });
 }, false);
 
 document.getElementById('checkoutButton').addEventListener('click', function() {
